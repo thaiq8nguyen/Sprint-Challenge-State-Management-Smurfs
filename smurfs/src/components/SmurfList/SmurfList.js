@@ -10,7 +10,7 @@ const SmurfList = props => {
   }, []);
   return (
     <Container textAlign="left">
-      <Header>Smurf Village</Header>
+      <Header>Smurf Family</Header>
       <Grid columns={3} stackable>
         {props.smurfs.map(smurf => (
           <Grid.Column key={smurf.id}>

@@ -5,7 +5,7 @@ import SmurfList from "../SmurfList/SmurfList";
 const SmurfVillage = () => {
   return (
     <>
-      <Grid container columns={2} padded="vertically" divided>
+      <Grid container columns={2} padded="vertically" divided stackable>
         <Grid.Row>
           <Grid.Column width={4}>
             <AddSmurf />
