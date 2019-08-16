@@ -1,4 +1,4 @@
-#Complete Project
+# Complete Project
 
 ![screenshot](./smurfs/screenshot/smurf_village.png)
 
