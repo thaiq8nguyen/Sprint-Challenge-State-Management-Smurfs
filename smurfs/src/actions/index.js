@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const SMURF_ACTION_STARTED = "SMURF_ACTION_STARTED";
-export const SMURF_ACTION_SUCSESS = "SMURF_ACTION_SUCCESS";
+export const SMURF_ACTION_SUCCESS = "SMURF_ACTION_SUCCESS";
 export const SMURF_ACTION_FAILURE = "SMURF_ACTION_FAILURE";
 
 const client = axios.create({
