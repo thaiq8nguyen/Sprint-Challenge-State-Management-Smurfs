@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const SMURF_ACTION_STARTED = "SMURF_ACTION_STARTED";
-export const SMURF_ACTION_SUCSESS = "SMURF_ACTION_SUCCESS";
+export const SMURF_ACTION_SUCCESS = "SMURF_ACTION_SUCCESS";
 export const SMURF_ACTION_FAILURE = "SMURF_ACTION_FAILURE";
 
 const client = axios.create({
@@ -13,7 +13,7 @@ export const getSmurfs = () => dispatch => {
   client
     .get("/smurfs")
     .then(response =>
-      dispatch({ type: SMURF_ACTION_SUCSESS, payload: response.data })
+      dispatch({ type: SMURF_ACTION_SUCCESS, payload: response.data })
     )
     .catch(error => dispatch({ type: SMURF_ACTION_FAILURE, error: error }));
 };
@@ -23,7 +23,7 @@ export const addSmurf = smurf => dispatch => {
   client
     .post("/smurfs", smurf)
     .then(response =>
-      dispatch({ type: SMURF_ACTION_SUCSESS, payload: response.data })
+      dispatch({ type: SMURF_ACTION_SUCCESS, payload: response.data })
     )
     .catch(error => dispatch({ type: SMURF_ACTION_FAILURE, error: error }));
 };
@@ -33,7 +33,7 @@ export const updateSmurf = smurf => dispatch => {
   client
     .put(`/smurfs/${smurf.id}`, smurf)
     .then(response =>
-      dispatch({ type: SMURF_ACTION_SUCSESS, payload: response.data })
+      dispatch({ type: SMURF_ACTION_SUCCESS, payload: response.data })
     )
     .catch(error => dispatch({ type: SMURF_ACTION_FAILURE, error: error }));
 };
@@ -44,7 +44,7 @@ export const deleteSmurf = smurfID => dispatch => {
   client
     .delete(`/smurfs/${smurfID}`)
     .then(response =>
-      dispatch({ type: SMURF_ACTION_SUCSESS, payload: response.data })
+      dispatch({ type: SMURF_ACTION_SUCCESS, payload: response.data })
     )
     .catch(error => dispatch({ type: SMURF_ACTION_FAILURE, error: error }));
 };

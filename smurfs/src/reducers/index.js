@@ -1,6 +1,6 @@
 import {
   SMURF_ACTION_STARTED,
-  SMURF_ACTION_SUCSESS,
+  SMURF_ACTION_SUCCESS,
   SMURF_ACTION_FAILURE
 } from "../actions";
 const DEFAULT_STATE = {
@@ -23,7 +23,7 @@ const rootReducer = (state = DEFAULT_STATE, action) => {
   switch (action.type) {
     case SMURF_ACTION_STARTED:
       return smurfActionStarted(state, action);
-    case SMURF_ACTION_SUCSESS:
+    case SMURF_ACTION_SUCCESS:
       return smurfActionSuccess(state, action);
     case SMURF_ACTION_FAILURE:
       return smurfActionFailure(state, action);
